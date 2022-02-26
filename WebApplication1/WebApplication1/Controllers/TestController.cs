@@ -16,10 +16,10 @@ namespace WebApplication1.Controllers
         [TypeFilter(typeof(ActionFilter))]
         [HttpGet]
         [Route("hello")]
-        public ActionResult Hello()
+        public void Hello()
         {
 
-            return Ok("hello");
+            Response.WriteAsync("Hello World! \r\n");
         }
 
 
